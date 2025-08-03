@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santhosh R Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }body {
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  padding: 5rem 2rem 3rem;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 999;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f57c00;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+#about img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.skills-list, .projects-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li, .projects-list li {
+  padding: 0.5rem 0;
+}
+
+.contact-icons a {
+  margin-right: 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.contact-icons a:hover {
+  color: #f57c00;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  background: #fff;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+  </style>
+</head>
+<body>  <header>
+    <h1>Santhosh R</h1>
+    <p>Computer Science Engineering | Second Year</p>
+  </header>  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>  <main>
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <img src="img/profile.jpg" alt="img" />
+      <p>Hello! I am Santhosh R, a second-year student in Computer Science Engineering at Dhaanish Ahmed College of Engineering, passionate about coding, problem-solving, and building meaningful projects.</p>
+      <br>
+      <a href="#" target="_blank">Download Resume</a>
+    </section><section id="skills" class="card">
+  <h2>Skills</h2>
+  <ul class="skills-list">
+    <li>Python, C, Java</li>
+    <li>Web Development, Backend, Application Support</li>
+    <li>Problem Solving, Algorithms</li>
+    <li>MySQL, GitHub, HackerRank, Excel</li>
+  </ul>
+</section>
+
+<section id="projects" class="card">
+  <h2>Projects</h2>
+  <ul class="projects-list">
+    <li>
+      <strong>Internship: Web Development</strong>
+      <p>Worked on web technologies during internship.</p>
+    </li>
+    <li>
+      <strong>Smart India Hackathon</strong>
+      <p>Participated in national-level hackathon, contributed to a real-time problem-solving project.</p>
+    </li>
+  </ul>
+</section>
+
+<section id="education" class="card">
+  <h2>Education</h2>
+  <p>Bachelor of Engineering (B.E), Computer Science Engineering<br>
+  Dhaanish Ahmed College of Engineering, Chennai<br>
+  2025 – 2028 (Expected)</p>
+  <p>HSC (12th Standard): Completed with 75%<br>
+  SSLC (10th Standard): Completed with 75%</p>
+</section>
+
+<section id="contact" class="card">
+  <h2>Contact</h2>
+  <div class="contact-icons">
+    <a href="#" title="GitHub">GitHub</a>
+    <a href="mailto:santhoshr4727@gmail.com" title="Email">Email</a>
+    <a href="https://www.instagram.com/santhosh._.047?igsh=MW53ODQ2NDRhMzVsYg==" title="Instagram">Instagram</a>
+    <a href="#" title="LinkedIn">LinkedIn</a>
+  </div>
+</section>
+
+  </main>  <footer>
+    © 2025 Santhosh R's Portfolio. All rights reserved.
+  </footer>  <script>
+    // Section reveal on scroll
+    const sections = document.querySelectorAll("section");
+    const revealSection = () => {
+      const scrollY = window.scrollY + window.innerHeight * 0.85;
+      sections.forEach((sec) => {
+        if (scrollY > sec.offsetTop) {
+          sec.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", revealSection);
+    window.addEventListener("load", revealSection);
+  </script></body>
+</html>
